@@ -1,0 +1,66 @@
+<!DOCTYPE html><div class="box">
+   
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Registration</title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="ragestration.css">
+        </head>
+        <body>
+            
+            <span class="borderLine"></span>
+            <form action="connect.php" method="Post">
+                <h2> Sign up</h2>
+                <div class="inputBox">
+                    <input type="text" required="required" name="Username">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" required="required" name="email">
+                    <span>email address</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password"id="password" required="required" name="password">
+                    <span>password</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="confirmPassword" required="required" name="confirmPassword">
+                    <span>confirmPassword</span>
+                    <i></i>
+                </div>
+               <div class="inputBox">
+                <input type="submit" value="Sign up">
+               </div>
+               <div class="Links">
+                    <p> Already a member ? <a href="login.html"class="login">Login </a></p>
+                </div>
+            </form>
+         </div>
+         <script>
+            // JavaScript to validate password and confirm password fields
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirmPassword");
+            const passwordError = document.getElementById("passwordError");
+    
+            function validatePassword() {
+                if (password.value !== confirmPassword.value) {
+                    passwordError.textContent = "Passwords do not match";
+                } else {
+                    passwordError.textContent = "";
+                }
+            }
+    
+            confirmPassword.addEventListener("input", validatePassword);
+        </script>
+        </body>
+    </html>
